@@ -25,6 +25,7 @@ body {
 
 .container-logo {
    display: flex;
+   justify-content: flex-start;
 }
 
 .navbar .container {
