@@ -86,8 +86,22 @@ body {
 	color: #000;
 	/* text-transform: uppercase; */
 	transition: all 0.07s ease-in-out;
+   
 }
 
 /* .navbar-brand:hover {
 	color: aqua;
 } */
+
+.logo {
+   height: 40px;
+   margin-right: 2px;
+}
+
+.call-button:hover {
+    background-color: #218838; /* Темно-зеленый цвет при наведении */
+}
+
+.call-button:active {
+    background-color: #1e7e34; /* Цвет кнопки при нажатии */
+}
