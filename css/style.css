@@ -7,7 +7,7 @@ body {
 	font-family: 'Noto Sans', sans-serif;
 	font-size: 16px;
 	line-height: 1.4;
-	color: #000;
+	color: #363636;
 	min-width: 320px;
 	overflow-x: hidden;
 	height: auto;
@@ -43,6 +43,7 @@ body {
 .logo {
    height: 40px;
    margin-right: 20px;
+   border-radius: 50%
 }
 
 .navbar .container {
@@ -67,6 +68,7 @@ body {
 	display: inline-block;
 	color: #000;
 	padding: 10px;
+   font-size: 24px;
 	opacity: 0.6;
 	text-decoration: none;
 	transition: all 0.07s ease-in-out;
@@ -75,8 +77,8 @@ body {
 .navbar-menu li a:hover {
 	opacity: 1;
    transform: scale(1.04);
-	
-   box-shadow: 0 9px 9px rgba(0, 255, 255, 0.5);
+	border-radius: 5px;
+   box-shadow: 0 9px 9px rgba(58, 114, 255, 0.5);
 }
 
 .navbar-wrap {
@@ -105,7 +107,7 @@ body {
 	font-weight: 700;
 	font-size: 26px;
 	text-decoration: none;
-	color: #000;
+	color: #363636;
 	/* text-transform: uppercase; */
 	transition: all 0.07s ease-in-out;
    
@@ -116,11 +118,11 @@ body {
 } */
 
 
-
+/* 
 .call-button:hover {
     background-color: #218838; /* Темно-зеленый цвет при наведении */
 }
 
 .call-button:active {
     background-color: #1e7e34; /* Цвет кнопки при нажатии */
-}
+} */
