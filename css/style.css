@@ -11,7 +11,17 @@ body {
 	min-width: 320px;
 	overflow-x: hidden;
 	height: auto;
+   
 }
+
+body {
+   background-image: url('../img/background.jpg'); /* Укажите путь к вашему изображению */
+   background-size: cover; /* Масштабирует изображение, чтобы оно заполнило всю страницу */
+   background-position: center; /* Центрирует изображение */
+   background-repeat: no-repeat; /* Изображение не повторяется */
+   background-attachment: fixed; /* Фиксирует изображение при прокрутке страницы */
+}
+
 
 /**
  * Другие стили
@@ -26,6 +36,13 @@ body {
 .container-logo {
    display: inline-flex;
    justify-content: flex-start;
+   /* flex-wrap: nowrap; */
+   /* margin-left: 40px; */
+}
+
+.logo {
+   height: 40px;
+   margin-right: 20px;
 }
 
 .navbar .container {
@@ -33,7 +50,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-   margin-inline: 20px;
+   margin-inline: 40px;
 }
 
 .navbar-menu {
@@ -98,10 +115,7 @@ body {
 	color: aqua;
 } */
 
-.logo {
-   height: 40px;
-   margin-right: 2px;
-}
+
 
 .call-button:hover {
     background-color: #218838; /* Темно-зеленый цвет при наведении */
