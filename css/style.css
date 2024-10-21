@@ -11,7 +11,20 @@
    }
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,1000;1,200;1,1000&display=swap');
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); */
+
+body {
+	background-image: url('../img/background.jpg');
+	background-repeat: no-repeat;
+   background-size: cover;
+	background-position: center;
+	min-height: 100%;
+   background-attachment: fixed;
+	}
+
 
 .layout {
 	display: flex;
@@ -35,7 +48,7 @@
 	--light-blue: #28a3f7;
 	--gradient: label-gradient(45deg, var(--blue), var(--light-blue));
 	--box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-	--box-shadow-footer: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+	--box-shadow-footer: 0 -0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 html {
@@ -53,7 +66,7 @@ header {
 	width: 100%;
 	top: 0;
 	left: 0;
-	background-color: #fff;
+	/* background-color: #fff; */
 	box-shadow: var(--box-shadow);
 	padding: 2rem 8%;
 	display: flex;
@@ -102,6 +115,17 @@ header label {
 .home .img img {
 	min-width: 35vw;
 	animation: animateBg 3s linear infinite;
+   filter: drop-shadow(
+      60px 60px 10px rgb(0 0 0 / 0.5)
+   );
+}
+
+.wrapper {
+   background-color: #fff;
+   opacity: 0.7;
+   padding: 2rem;
+   border-radius: 1rem;
+   
 }
 
 @keyframes animateBg {
@@ -116,18 +140,20 @@ header label {
 
 .home .content h2 {
 	font-size: 5rem;
-	color: #222;
+	color: #000; 
+   /* color: #222; */
 	text-transform: uppercase;
-   /* white-space: nowrap; */
+	/* white-space: nowrap; */
 }
 
 .home .content h3 {
-   font-size: 3rem;
+	font-size: 3rem;
 }
 
 .home .content p {
-	font-size: 1.8rem;
-	color: #555;
+	font-size: 2.5rem;
+	/* color: #555; */
+   color: #000;
 	padding: 1rem 0;
 	/* text-align: center; */
 }
@@ -138,10 +164,16 @@ section {
 }
 
 footer {
-	height: 50px;
-	background-color: #638889;
+	height: 2rem;
+	/* background-color: #638889; */
 	flex-shrink: 0;
-   margin-top: 20rem;
+	/* margin-top: 20rem; */
+   box-shadow: var(--box-shadow-footer);
+   padding: 2rem 8%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+   color:#fff;
 }
 
 @media (max-width: 1200px) {
@@ -151,15 +183,28 @@ footer {
 }
 
 @media (max-width: 991px) {
+   section {
+      margin-top: 22rem;
+      margin-bottom: 22rem;
+   }
+}
+
+/* @media (max-width: 991px) {
 	section {
 		padding: 0 3%;
 		padding-top: 8rem;
 	}
-   .home {
-      margin-bottom: 20rem;
-      margin-top: 20rem;
+	.home {
+		margin-bottom: 20rem;
+		margin-top: 20rem;
 	}
-   
+} */
+
+@media (max-width: 896px) {
+   .home {
+      margin-top: 48rem;
+      margin-bottom: 46rem;
+   }
 }
 
 @media (max-width: 777px) {
@@ -168,9 +213,9 @@ footer {
 		opacity: 1;
 	}
 
-   header {
-      margin-bottom: 100 px;
-   }
+	header {
+		margin-bottom: 100px;
+	}
 
 	header .navbar {
 		position: absolute;
@@ -184,7 +229,7 @@ footer {
 		transform-origin: top;
 		transform: scale(0);
 		opacity: 0;
-      
+      transition: transform 0.3s ease, opacity 0.3s ease;
 	}
 
 	header .navbar a {
@@ -196,37 +241,78 @@ footer {
 
 	header input:checked ~ .navbar {
 		transform: scale(1);
-		opacity: 1;
+		opacity: 0.8;
 	}
 
 	.home {
 		flex-flow: column-reverse;
 		padding-top: 17rem;
-      margin-bottom: 50rem;
+		margin-bottom: 50rem;
+      margin-top: 20rem;
 	}
 
 	.home .img img {
 		width: 100%;
-		margin-top: 20rem;
+		margin-top: 25rem;
 	}
-   
-   .home .content {
-      margin-inline: 2rem;
-   }
+
+	.home .content {
+		margin-inline: 2rem;
+	}
 
 	.home .content h2 {
 		font-size: 3.5rem;
-      margin-inline: 2rem;
+		margin-inline: 2rem;
 	}
 
 	.home .content p {
 		font-size: 2rem;
-      margin-inline: 2rem;
+		margin-inline: 2rem;
 	}
+}
+
+@media (max-width: 667px) {
+   .home {
+      margin-top: 36rem;
+      margin-bottom: 66rem;
+   }
 }
 
 @media (max-width: 450px) {
 	html {
 		font-size: 50%;
 	}
+   
 }
+
+@media (max-width: 414px) {
+   .home {
+      margin-top: 20rem;
+      margin-bottom: 52rem;
+   }
+}
+
+@media (max-width: 390px) {
+   .home {
+      margin-top: 22rem;
+      margin-bottom: 54rem;
+   }
+}
+
+@media (max-width: 376px) {
+   /* .img {
+      margin-top: 32rem;
+   }
+
+   footer {
+      margin-top: 30rem;
+   } */
+   .home {
+      margin-top: 32rem;
+      margin-bottom: 64rem;
+   }
+}
+
+
+
+
